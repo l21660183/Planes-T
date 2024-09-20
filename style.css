@@ -1,0 +1,136 @@
+/* Márgenes y rellenos de todos los elementos y establece el modelo de cada tarjeta para incluir bordes y rellenos en el ancho total */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('12.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+    background-position: center; /* Centra la imagen en el área visible */
+    background-repeat: no-repeat; /* No repite la imagen */
+}
+
+/* Estilo para la sección de los planes tarifarios */
+.planes {
+    text-align: center; /* Centra el texto dentro de la sección */
+    padding-top: 50px; /* Espacio superior para separar del contenido anterior */
+}
+
+/* Estilo para el título principal */
+h1 {
+    font-size: 500%; /* Tamaño de fuente grande para el título */
+    color: #000000; /* Color del texto */
+    margin-bottom: 45px; /* Espacio inferior entre el título y los planes */
+}
+
+/* Estilo para la sección que contiene los planes tarifarios */
+.planes-tarifarios {
+    display: flex; /* Usa el diseño flex para organizar los planes */
+    gap: 20px; /* Espacio entre cada tarjeta */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+/* Estilo para cada plan tarifario */
+.plan {
+    background-color: rgb(255, 255, 255); /* Color de fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra*/
+    padding: 20px; /* Espacio interno dentro del plan */
+    width: 250px; /* Ancho fijo de cada plan */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animaciones suaves para transformaciones y sombras */
+    position: relative; /* Posición relativa */
+    overflow: hidden; /* Oculta el desbordamiento del contenido */
+}
+
+/* Efecto al pasar el ratón sobre el plan */
+.plan:hover {
+    transform: translateY(-20px); /* Eleva el plan al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el ratón */
+}
+
+/* Línea decorativa en la parte superior antes de cada plan */
+.plan::before {
+    content: ""; /* No se muestra contenido, solo sirve para el estilo */
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Ubicación en la parte superior */
+    left: 0; /* Ubicación a la izquierda */
+    width: 100%; /* Ancho completo del contenedor */
+    height: 4px; /* Altura de la línea decorativa */
+    background: linear-gradient(90deg, rgba(255,0,150,1) 0%, rgba(0,204,255,1) 100%); /* Difuminacion de color */
+}
+
+/* Estilo para el título de los planes */
+.titulo-plan1, .titulo-plan2, .titulo-plan3 {
+    font-size: 200%; /* Tamaño de fuente grande */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Colores específicos para cada título de plan */
+.titulo-plan1 {
+    color: rgba(255,0,150,1); /* Color rosa */
+}
+
+.titulo-plan2 {
+    color: #8b04fa; /* Color púrpura */
+}
+
+.titulo-plan3 {
+    color: rgba(0,204,255,1); /* Color azul */
+}
+
+/* Estilo para el precio de cada plan */
+.precio {
+    font-size: 200%; /* Tamaño de fuente grande */
+    color: #000000; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo para la lista de características del plan */
+.caracteristicas {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo para cada elemento de la lista de características */
+.caracteristicas li {
+    font-size: 100%; /* Tamaño de fuente normal */
+    color: #555; /* Color gris oscuro */
+    padding: 5px 0; /* Espacio interno vertical */
+}
+
+/* Estilo base para los botones */
+.btn1, .btn2, .btn3 {
+    display: inline-block; /* Muestra los botones en línea */
+    padding: 10px 20px; /* Espacio interno del botón */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    border-radius: 4px; /* Bordes redondeados del botón */
+    color: rgb(255, 255, 255); /* Color del texto */
+    font-weight: bold; /* Negrita en el texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.2); /* Sombra */
+}
+
+/* Colores de fondo para cada tipo de botón */
+.btn1 {
+    background-color: #000000; /* Fondo negro */
+}
+
+.btn2 {
+    background-color: #000000; /* Fondo negro */
+}
+
+.btn3 {
+    background-color: #000000; /* Fondo negro */
+}
+
+/* Colores de fondo al pasar el ratón sobre los botones */
+.btn1:hover {
+    background-color: rgba(255,0,150,1); /* Fondo rosa */
+}
+.btn2:hover {
+    background-color: #8b04fa; /* Fondo púrpura */
+}
+
+.btn3:hover {
+    background-color: rgba(0,204,255,1); /* Fondo azul */
+}
